@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Merhi Homekey | Beirut Real Estate</title>
+<meta name="description" content="Merhi Homekey, Beirut real estate. Apartments in Beirut and Lebanon to buy, sell or rent, with new properties every week. WhatsApp 70 868 757.">
+<meta property="og:title" content="Merhi Homekey | Beirut Real Estate">
+<meta property="og:description" content="Your key to luxury living. Apartments in Beirut & Lebanon: Buy · Sell · Rent.">
+<meta property="og:image" content="img/sa-3.webp">
+<link rel="icon" href="img/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --ivory:#FAFAF8;--paper:#FFFFFF;--sand:#F3F1EC;
+  --ink:#0E0E0E;--brown:#2B2B2B;--muted:#77736C;--line:#E7E4DD;
+  --gold:#C2963F;--gold-d:#94692A;--gold-l:#EBCB7E;
+  --cedar:#2F7D32;
+  --goldgrad:linear-gradient(100deg,#9C7128 0%,#F0D38A 48%,#B9893A 100%);
+  --serif:'Marcellus',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;
+  --r:2px;--wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font:500 12px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.h-serif{font-family:var(--serif);font-weight:400;letter-spacing:.01em;line-height:1.12}
+.rule{display:block;width:64px;height:1px;background:var(--goldgrad);margin:18px 0 22px}
+.center{text-align:center}.center .rule{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 30px;font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;border-radius:var(--r);transition:.25s}
+.btn-gold{background:var(--goldgrad);color:#fff;box-shadow:0 8px 24px -10px rgba(156,113,40,.7)}
+.btn-gold:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-line{border:1px solid currentColor}
+.btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+svg.i{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .35s,box-shadow .35s;color:#fff;background:rgba(11,11,11,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(201,151,63,.35)}
+.hdr .in{display:flex;align-items:center;gap:30px;height:86px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg.mark{width:48px;height:52px}
+.wm{display:flex;flex-direction:column;align-items:center;line-height:1}
+.wm b{font:400 25px/1 var(--serif);letter-spacing:.28em;margin-right:-.28em;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wm small{display:flex;align-items:center;gap:6px;font:500 9px/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--gold-l);margin-top:6px;margin-right:-.42em}
+.wm small::before,.wm small::after{content:"";width:12px;height:1px;background:var(--gold)}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{font:400 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:8px 0;position:relative;white-space:nowrap}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .3s}
+.nav a:hover::after,.nav a.on::after{right:0}
+.hdr .call{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 var(--sans);letter-spacing:.06em;padding:12px 18px;border:1px solid var(--gold);border-radius:var(--r);color:var(--gold-l)}
+.hdr .call:hover{background:var(--gold);color:#111}
+.hdr .fav{position:relative;display:grid;place-items:center;width:40px;height:40px}
+.hdr .fav b{position:absolute;top:3px;right:1px;min-width:17px;height:17px;border-radius:9px;background:var(--gold);color:#fff;font:500 10px/17px var(--sans);text-align:center;padding:0 4px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#0B0B0B}
+.hero .bg{position:absolute;inset:0;background:url(img/sa-3.webp) center 55%/cover;opacity:0;animation:fadeIn 1.2s ease-out forwards}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,.6) 0%,rgba(8,8,8,.2) 35%,rgba(8,8,8,.3) 55%,rgba(8,8,8,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:64px;padding-top:150px}
+.hero .eyebrow{color:var(--gold-l)}
+.hero h1,.hero p.lead,.hero .eyebrow{text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.hero h1{font-size:clamp(40px,6.4vw,84px);max-width:15ch;margin:20px 0 18px}
+.hero h1 em{font-style:normal;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-weight:300;font-size:18px;max-width:46ch;opacity:.9}
+.search{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr) auto;background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--r);box-shadow:0 30px 60px -30px rgba(0,0,0,.6);max-width:980px}
+.search label{display:block;padding:16px 24px 14px;border-right:1px solid var(--line)}
+.search label span{display:block;font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.search select{width:100%;border:0;background:transparent;font:500 17px/1.3 var(--sans);appearance:none;-webkit-appearance:none;outline:0;cursor:pointer;padding-right:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23B8892E' fill='none'/%3E%3C/svg%3E") right center no-repeat}
+.search .btn{height:auto;margin:10px;padding:0 34px}
+.scroll-cue{position:absolute;right:28px;bottom:70px;z-index:2;writing-mode:vertical-rl;font:400 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.75;display:flex;align-items:center;gap:14px}
+.scroll-cue::after{content:"";width:1px;height:60px;background:linear-gradient(#fff,transparent)}
+
+/* facts strip */
+.strip{background:var(--ink);color:#EFE7DA}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:30px 24px;border-left:1px solid rgba(227,196,107,.18)}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip b{display:block;font:400 30px/1.1 var(--serif);color:var(--gold-l)}
+.strip span{font:300 13px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+
+section.sec{padding:110px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:46px}
+.sec-head h2,.h2{font-size:clamp(34px,4.2vw,54px)}
+.sec-head p{color:var(--muted);max-width:44ch}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);white-space:nowrap}
+.link-arrow:hover{gap:16px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(0,0,0,.35)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.95);color:var(--ink);font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:9px 12px;border-radius:var(--r)}
+.tag.g{background:var(--goldgrad);color:#fff;left:auto;right:62px}
+.heart{position:absolute;right:14px;top:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;color:var(--brown);transition:.2s}
+.heart:hover{color:var(--gold)}
+.heart.on{color:#B3402F}.heart.on svg{fill:currentColor}
+.card .body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.loc{display:flex;align-items:center;gap:7px;font:400 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
+.loc svg{width:14px;height:14px}
+.card h3{font:400 25px/1.18 var(--serif);margin:12px 0 16px}
+.price{font:400 26px/1 var(--serif);color:var(--ink)}
+.price small{display:block;font:400 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.specs{display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:var(--brown);font-size:14px}
+.specs span{display:inline-flex;align-items:center;gap:7px}
+.specs svg{width:17px;height:17px;color:var(--gold)}
+.card .row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+
+/* spotlight */
+.spot{background:var(--paper)}
+.spot .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:260px 220px;gap:14px}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.collage img:first-child{grid-column:1/3}
+.spot .facts{display:grid;grid-template-columns:repeat(4,auto);gap:10px 30px;margin:30px 0 34px;justify-content:start}
+.spot .facts div b{display:block;font:400 34px/1 var(--serif)}
+.spot .facts div span{font:400 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.quote{font:400 22px/1.45 var(--serif);color:var(--brown);padding-left:20px;border-left:1px solid var(--gold)}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.area{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:var(--r);color:#fff;display:flex;align-items:flex-end;padding:28px}
+.area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.area::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,8,8,.85));z-index:1}
+.area:hover img{transform:scale(1.06)}
+.area div{position:relative;z-index:2}
+.area h3{font:400 34px/1 var(--serif)}
+.area p{font:300 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-top:10px;color:var(--gold-l)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.svc>div{padding:44px 36px 10px 0;margin-right:36px;border-right:1px solid var(--line)}
+.svc>div:last-child{border-right:0;margin-right:0}
+.svc .n{font:400 15px/1 var(--serif);color:var(--gold);letter-spacing:.1em}
+.svc h3{font:400 30px/1.1 var(--serif);margin:16px 0 12px}
+.svc p{color:var(--muted)}
+
+/* sell */
+.sell{background:var(--ink);color:#EFE7DA;position:relative;overflow:hidden}
+.sell .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.sell h2{color:#fff}
+.sell p{opacity:.8;font-weight:300}
+.sell ul{list-style:none;margin-top:28px;display:grid;gap:14px}
+.sell li{display:flex;gap:14px;align-items:flex-start;font-weight:300}
+.sell li svg{color:var(--gold-l);margin-top:4px}
+.form{background:var(--paper);color:var(--ink);padding:40px;border-radius:var(--r);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form .full{grid-column:1/-1}
+.form label span{display:block;font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.form input,.form select,.form textarea{width:100%;border:0;border-bottom:1px solid var(--line);padding:10px 0;background:transparent;outline:0;font-size:16px;border-radius:0}
+.form select{appearance:none;-webkit-appearance:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold)}
+.form textarea{resize:vertical;min-height:70px}
+.form .note{font-size:13px;color:var(--muted)}
+
+/* contact */
+.cbox{border:1px solid var(--line);background:var(--paper);padding:36px;border-radius:var(--r)}
+.cbox h3{font:400 26px/1.1 var(--serif);margin:14px 0 10px}
+.cbox p{color:var(--muted);margin-bottom:18px}
+.cbox a.l{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-weight:500}
+.cbox a.l:hover{color:var(--gold-d)}
+.cbox .ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold)}
+
+/* footer */
+footer{background:#221C17;color:#CFC4B4;padding:70px 0 30px}
+footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(227,196,107,.15)}
+footer img{height:84px;width:auto;margin-bottom:18px}
+footer h4{font:500 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-l);margin-bottom:20px}
+footer a{display:block;padding:5px 0;font-weight:300}
+footer a:hover{color:#fff}
+footer .bot{display:flex;justify-content:space-between;gap:20px;padding-top:26px;font-size:13px;opacity:.6;flex-wrap:wrap}
+footer p{font-weight:300;max-width:34ch}
+
+/* page head */
+.phead{padding:150px 0 50px;background:var(--sand);border-bottom:1px solid var(--line)}
+.phead h1{font-size:clamp(40px,5vw,64px)}
+.crumbs{font-size:13px;color:var(--muted);letter-spacing:.06em;margin-bottom:16px}
+.crumbs a:hover{color:var(--gold-d)}
+.filters{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin-top:30px}
+.filters label{flex:1;min-width:160px}
+.filters label span{display:block;font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.filters select{width:100%;height:50px;border:1px solid var(--line);background:#fff;padding:0 14px;border-radius:var(--r);outline:0}
+.filters select:focus{border-color:var(--gold)}
+.count{margin:40px 0 24px;color:var(--muted);font-size:14px;letter-spacing:.06em}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+.empty h3{font:400 30px/1.2 var(--serif);color:var(--ink);margin-bottom:10px}
+
+/* property page */
+.pp{padding-top:110px}
+.gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:250px 250px;gap:10px;margin-top:20px}
+.gal button{position:relative;overflow:hidden;border-radius:var(--r);background:var(--sand)}
+.gal button img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gal button:hover img{transform:scale(1.04)}
+.gal button:first-child{grid-row:1/3}
+.gal .more{position:absolute;inset:0;background:rgba(8,8,8,.55);color:#fff;display:grid;place-items:center;font:500 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.gal .all{position:absolute;left:16px;bottom:16px;background:#fff;color:var(--ink);padding:11px 16px;font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border-radius:var(--r);display:flex;gap:8px;align-items:center}
+.pp-grid{display:grid;grid-template-columns:1fr 380px;gap:60px;margin:46px 0 100px;align-items:start}
+.pp h1{font-size:clamp(34px,4vw,52px);margin:14px 0 10px}
+.pp .sub{color:var(--muted);font-size:17px}
+.kf{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--paper);margin:34px 0;border-radius:var(--r)}
+.kf div{padding:22px 20px;border-left:1px solid var(--line)}
+.kf div:first-child{border-left:0}
+.kf svg{color:var(--gold);width:22px;height:22px;margin-bottom:12px}
+.kf b{display:block;font:400 28px/1 var(--serif)}
+.kf span{font:400 11px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pp h2{font:400 30px/1.1 var(--serif);margin:46px 0 16px}
+.pp .desc p{margin-bottom:14px;color:#444;font-weight:300;font-size:17px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px 30px;list-style:none}
+.feat li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.feat li svg{color:var(--gold)}
+.mapbox{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 28px;background:var(--sand);border-radius:var(--r);flex-wrap:wrap}
+.mapbox b{font:400 24px/1.1 var(--serif)}
+.side{position:sticky;top:110px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:34px}
+.side .price{font-size:40px}
+.side .btn{width:100%;margin-top:12px}
+.side .agent{display:flex;align-items:center;gap:14px;margin:26px 0 8px;padding-top:24px;border-top:1px solid var(--line)}
+.side .agent img{width:64px;height:auto}
+.side .agent b{display:block;font:400 20px/1.1 var(--serif)}
+.side .agent span{font-size:14px;color:var(--muted)}
+.side .tools{display:flex;gap:10px;margin-top:16px}
+.side .tools button{flex:1;height:46px;border:1px solid var(--line);border-radius:var(--r);display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.side .tools button:hover{border-color:var(--gold);color:var(--gold-d)}
+.side .tools button.on{color:#B3402F;border-color:#B3402F}
+.side .tools button.on svg{fill:currentColor}
+.mprice,.mbar{display:none}
+.btn-wa{background:var(--goldgrad);color:#fff;box-shadow:0 8px 24px -10px rgba(156,113,40,.7)}.btn-wa:hover{filter:brightness(1.06)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:#0E0B09;display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb .top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;color:#ddd;font-size:14px;letter-spacing:.12em}
+.lb .stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;min-height:0;padding:0 70px}
+.lb .stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;display:grid;place-items:center}
+.lb .nv:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.lb .pv{left:14px}.lb .nx{right:14px}
+.lb .x{color:#fff;width:44px;height:44px;display:grid;place-items:center}
+.lb .th{display:flex;gap:8px;justify-content:center;padding:16px;overflow-x:auto}
+.lb .th img{width:76px;height:54px;object-fit:cover;opacity:.45;cursor:pointer;border:1px solid transparent;flex:none}
+.lb .th img.on{opacity:1;border-color:var(--gold-l)}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:14px 22px;border-radius:var(--r);font-size:14px;opacity:0;transition:.3s;z-index:120;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--goldgrad);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(156,113,40,.75);border:1px solid rgba(255,255,255,.35);transition:transform .25s,filter .25s}
+.wa-float:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.wa-float svg{width:28px;height:28px;fill:#fff;stroke:none}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero .bg{animation:none}*{transition:none!important}}
+
+@media (max-width:1020px){
+  .grid,.areas{grid-template-columns:1fr 1fr}
+  .spot .wrap,.sell .wrap,.pp-grid{grid-template-columns:1fr;gap:44px}
+  .side{position:static}
+  .mprice{display:block;margin-top:22px;font-size:34px}
+  .mbar{display:flex;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+  .mbar .price{font-size:24px;margin-right:auto}
+  .mbar .price small{font-size:9px;margin-bottom:5px}
+  .mbar .btn{height:46px;padding:0 16px;letter-spacing:.12em}
+  body.pp-on .wa-float{display:none}
+  body.pp-on footer{padding-bottom:110px}
+  footer .top{grid-template-columns:1fr 1fr}
+  .hdr .call span{display:none}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .hdr .in{height:auto;flex-wrap:wrap;gap:0 12px;padding:10px 16px 0}
+  .wa-float{width:50px;height:50px;right:14px;bottom:14px}
+  .logo svg.mark{width:38px;height:42px}
+  .wm b{font-size:20px}
+  .wm small{font-size:7.5px}
+  .hdr .call{margin-left:auto;padding:10px 12px}
+  .nav{order:3;width:100%;margin:4px 0 0;gap:12px;justify-content:space-between}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:11px;letter-spacing:.12em;padding:10px 0 12px}
+  .hero .wrap{padding-top:150px;padding-bottom:40px}
+  .hero p.lead{font-size:16px}
+  .search{grid-template-columns:1fr 1fr;margin-top:28px}
+  .search label{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .search label:nth-child(2){border-right:0}
+  .search label:nth-child(3){grid-column:1/-1;border-right:0}
+  .search .btn{grid-column:1/-1;height:52px}
+  .scroll-cue{display:none}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div{padding:22px 14px;border-left:0;border-top:1px solid rgba(227,196,107,.18)}
+  .strip div:nth-child(-n+2){border-top:0}
+  .strip div:first-child{padding-left:14px}
+  .strip b{font-size:24px}
+  .strip span{font-size:11px}
+  section.sec{padding:70px 0}
+  .sec-head{flex-direction:column;align-items:flex-start;margin-bottom:30px}
+  .grid,.areas,.svc{grid-template-columns:1fr}
+  .areas .area{aspect-ratio:16/10}
+  .svc>div{border-right:0;margin-right:0;padding:30px 0;border-bottom:1px solid var(--line)}
+  .collage{grid-template-rows:200px 150px}
+  .spot .facts{grid-template-columns:repeat(2,auto)}
+  .form{grid-template-columns:1fr;padding:26px}
+  footer .top{grid-template-columns:1fr}
+  .phead{padding:140px 0 36px}
+  .filters label{min-width:calc(50% - 7px)}
+  .pp{padding-top:118px}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:240px 110px}
+  .gal button:first-child{grid-column:1/3;grid-row:1}
+  .kf{grid-template-columns:1fr 1fr}
+  .kf div:nth-child(3){border-left:0}
+  .kf div:nth-child(n+3){border-top:1px solid var(--line)}
+  .feat{grid-template-columns:1fr}
+  .lb .stage{padding:0 8px}
+  .lb .nv{display:none}
+  .side{padding:24px}
+}
+/* Merhi extras */
+.strip,.sell{background:#0B0B0B}
+footer{background:#0B0B0B;border-top:1px solid rgba(201,151,63,.35)}
+footer .brand-f{display:inline-flex;margin-bottom:18px}
+.side .agent svg.mark{width:40px;height:44px;background:#0B0B0B;padding:6px;border-radius:4px;box-sizing:content-box}
+.btn-wa,.btn-gold{color:#141210!important}
+.wa-float svg{fill:#141210!important}
+.rule{height:2px}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr"><div class="wrap in">
+  <a class="logo" href="#/" aria-label="Merhi Homekey home"><svg class="mark" viewBox="0 0 64 70" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D68A"/><stop offset=".5" stop-color="#C9973F"/><stop offset="1" stop-color="#8E6522"/></linearGradient></defs><g fill="none" stroke="url(#mg)" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27L32 6l26 21" stroke-width="3.2"/><path d="M45 15V8h6v12" stroke-width="2.6"/><path d="M29 16h6v5h-6zM32 16v5M29 18.5h6" stroke-width="1.2"/></g><path d="M12 64v-3l3-1V36l-3-1v-3h11l9 21 9-21h11v3l-3 1v24l3 1v3H39v-3l3-1V43l-8.6 20h-2.8L22 43v17l3 1v3z" fill="url(#mg)"/><g stroke="#0B0B0B" stroke-width="5" fill="none"><circle cx="32" cy="36" r="5"/><path d="M32 41v25"/></g><g stroke="url(#mg)" fill="none" stroke-linecap="round"><circle cx="32" cy="36" r="4.4" stroke-width="2.2"/><circle cx="32" cy="36" r="1.2" stroke-width="1.4"/><path d="M32 40.5V67M32 60h4.5M32 64.5h3.5" stroke-width="2.4"/></g></svg><span class="wm"><b>MERHI</b><small>Homekey</small></span></a>
+  <nav class="nav" id="nav">
+    <a href="#/" data-r="home">Home</a>
+    <a href="#/properties" data-r="properties">Properties</a>
+    <a href="#/sell" data-r="sell">List</a>
+    <a href="#/about" data-r="about">About</a>
+    <a href="#/contact" data-r="contact">Contact</a>
+  </nav>
+  <a class="fav" href="#/saved" aria-label="Saved properties"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><b id="favN" hidden>0</b></a>
+  <a class="call" id="hdrCall" href="#"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>70 868 757</span></a>
+</div></header>
+
+<main id="app"></main>
+
+<footer><div class="wrap">
+  <div class="top">
+    <div><a class="logo brand-f" href="#/"><svg class="mark" viewBox="0 0 64 70" aria-hidden="true"><defs><linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D68A"/><stop offset=".5" stop-color="#C9973F"/><stop offset="1" stop-color="#8E6522"/></linearGradient></defs><g fill="none" stroke="url(#mg2)" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27L32 6l26 21" stroke-width="3.2"/><path d="M45 15V8h6v12" stroke-width="2.6"/><path d="M29 16h6v5h-6zM32 16v5M29 18.5h6" stroke-width="1.2"/></g><path d="M12 64v-3l3-1V36l-3-1v-3h11l9 21 9-21h11v3l-3 1v24l3 1v3H39v-3l3-1V43l-8.6 20h-2.8L22 43v17l3 1v3z" fill="url(#mg2)"/><g stroke="#0B0B0B" stroke-width="5" fill="none"><circle cx="32" cy="36" r="5"/><path d="M32 41v25"/></g><g stroke="url(#mg2)" fill="none" stroke-linecap="round"><circle cx="32" cy="36" r="4.4" stroke-width="2.2"/><circle cx="32" cy="36" r="1.2" stroke-width="1.4"/><path d="M32 40.5V67M32 60h4.5M32 64.5h3.5" stroke-width="2.4"/></g></svg><span class="wm"><b>MERHI</b><small>Homekey</small></span></a><p>Your key to luxury living. Apartments in Beirut &amp; Lebanon, new properties every week.</p></div>
+    <div><h4>Explore</h4><a href="#/properties">All properties</a><a href="#/properties?area=Zouk%20Mosbeh">Zouk Mosbeh</a><a href="#/properties?area=Sahel%20Alma">Sahel Alma</a><a href="#/properties?area=Zouk%20Mikael">Zouk Mikael</a></div>
+    <div><h4>Agency</h4><a href="#/sell">List your property</a><a href="#/about">About us</a><a href="#/saved">Saved properties</a><a href="#/contact">Contact</a></div>
+    <div><h4>Contact</h4><a class="jsTel" data-n="70868757" href="#">+961 70 868 757</a><a href="#" data-wa="general">WhatsApp</a><a href="https://www.instagram.com/merhi.homekey/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="bot"><span>© <span id="yr"></span> Merhi Homekey. All rights reserved.</span><span>Buy · Sell · Rent · Beirut</span></div>
+</div></footer>
+
+<a class="wa-float" id="waFloat" href="#" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg></a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo gallery">
+  <div class="top"><span id="lbN"></span><button class="x" id="lbX" aria-label="Close"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="stage"><button class="nv pv" id="lbP" aria-label="Previous"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lbI" alt=""><button class="nv nx" id="lbNx" aria-label="Next"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  <div class="th" id="lbT"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const CONFIG = {
+  siteUrl: 'https://merhi-homekey.vercel.app/',   // links inside WhatsApp messages point here
+  mainPhone: '70868757',                          // WhatsApp + calls
+  country: '961',
+  instagram: 'https://www.instagram.com/merhi.homekey/'
+};
+
+/* ---- listings: edit here (sample listings to show the concept, replace with Merhi's own) ---- */
+const PROPS = [
+  {
+    id:'sahel-alma-sea-view', area:'Sahel Alma', region:'Keserwan',
+    title:'Luxury Living with Panoramic Sea View',
+    type:'Apartment', deal:'sale', status:'For sale', price:250000, from:true,
+    size:200, beds:3, baths:4, parking:2, phone:'70868757',
+    img:['sa-1','sa-3','sa-2','sa-4','sa-5'],
+    badge:'Sea view',
+    intro:'A 200 m² apartment in Sahel Alma, made for living with the Mediterranean in front of you.',
+    desc:[
+      'The living room opens to a panoramic sea view through wide windows, framed by recessed gypsum ceilings with warm hidden lighting. Light marble floors run through the reception and the entrance, which opens on both sides to the living spaces.',
+      'Three bedrooms, four bathrooms and two parking spots give a family room to breathe, in one of the most sought-after coastal neighbourhoods of Keserwan.'
+    ],
+    features:['Panoramic sea view','Gypsum ceilings with hidden lighting','Marble floors','Spacious reception','Air conditioning','2 parking spots']
+  },
+  {
+    id:'zouk-mikael-terrace', area:'Zouk Mikael', region:'Keserwan',
+    title:'Outdoor Living with a 61 m² Terrace',
+    type:'Apartment', deal:'sale', status:'For sale', price:170000, from:true,
+    size:155, terrace:61, beds:3, baths:2, parking:2, phone:'70868757',
+    img:['zk-1','zk-2','zk-3','zk-4','zk-5'],
+    badge:'61 m² terrace',
+    intro:'A 155 m² apartment in a new building in Zouk Mikael, with its own 61 m² terrace.',
+    desc:[
+      'Sliding glass doors open the rooms straight onto a private 61 m² terrace, ready for a lounge, a dining table or a garden of your own.',
+      'Three bedrooms, two bathrooms and two parking spots, delivered new so you can finish it in your own taste.'
+    ],
+    features:['Private 61 m² terrace','New building','Sliding glass doors','Bright rooms','Finish to your taste','2 parking spots']
+  },
+  {
+    id:'zouk-mosbeh-fresh-start', area:'Zouk Mosbeh', region:'Keserwan',
+    title:'Your Fresh Start Begins Here',
+    type:'Apartment', deal:'sale', status:'For sale', price:137000, from:true,
+    size:115, beds:2, baths:2, parking:1, phone:'70868757',
+    img:['zm-1','zm-2','zm-4','zm-3','zm-5','zm-6'],
+    badge:'Best price',
+    intro:'A bright 115 m² apartment in Zouk Mosbeh, the easiest way to own your first home.',
+    desc:[
+      'Large windows bring in light all day, and the balcony looks out on green. Two bedrooms and two bathrooms, both with modern tiling.',
+      'Delivered new and unfurnished, ready for you to make it yours, with one parking spot included.'
+    ],
+    features:['Balcony with green view','Two bathrooms','Bright, open rooms','New apartment','1 parking spot','Best entry price']
+  }
+];
+
+/* ---- helpers ---- */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const app=$('#app');
+const money=n=>'$'+n.toLocaleString('en-US');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtPhone=p=>p.replace(/^(\d{2})(\d{3})(\d{3})$/,'$1 $2 $3');
+const intl=p=>CONFIG.country+p;
+const base=()=>CONFIG.siteUrl||location.href.split('#')[0];
+const link=p=>base()+'#/p/'+p.id;
+const img=(k,s)=>'img/'+k+(s?'-s':'')+'.webp';
+const byId=id=>PROPS.find(p=>p.id===id);
+const isMobile=()=>/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+function openWa(phone,text){
+  const u='https://wa.me/'+intl(phone)+'?text='+encodeURIComponent(text);
+  const w=window.open(u,'_blank'); if(w){try{w.opener=null}catch(e){}} else location.href=u;
+}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2200)}
+
+const IC={
+  pin:'<svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  bed:'<svg class="i" viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01"/></svg>',
+  bath:'<svg class="i" viewBox="0 0 24 24"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg>',
+  area:'<svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h5M15 4v5M20 15h-5M9 20v-5"/></svg>',
+  car:'<svg class="i" viewBox="0 0 24 24"><path d="M5 16V11l2-5h10l2 5v5M5 16h14M5 16v2M19 16v2M3 11h18"/><circle cx="8" cy="13.5" r=".6"/><circle cx="16" cy="13.5" r=".6"/></svg>',
+  terr:'<svg class="i" viewBox="0 0 24 24"><path d="M12 3v4M5 7h14M7 7l-2 6h14l-2-6M12 13v8M8 21h8"/></svg>',
+  heart:'<svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
+  check:'<svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  arrow:'<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  wa:'<svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8L4 20z"/></svg>',
+  phone:'<svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>',
+  share:'<svg class="i" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>',
+  grid:'<svg class="i" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>',
+  map:'<svg class="i" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>'
+};
+
+/* favourites (per browser) */
+const FKEY='merhi_saved';
+let favs=[];try{favs=JSON.parse(localStorage.getItem(FKEY)||'[]').filter(byId)}catch(e){}
+function saveFavs(){try{localStorage.setItem(FKEY,JSON.stringify(favs))}catch(e){};const b=$('#favN');b.textContent=favs.length;b.hidden=!favs.length}
+function toggleFav(id){const i=favs.indexOf(id);if(i>-1)favs.splice(i,1);else favs.push(id);saveFavs();toast(i>-1?'Removed from saved':'Saved to your list');$$('[data-fav="'+id+'"]').forEach(b=>b.classList.toggle('on',favs.includes(id)))}
+
+/* ---- pieces ---- */
+function specs(p){return `<div class="specs"><span>${IC.area}${p.size} m²</span><span>${IC.bed}${p.beds} Beds</span><span>${IC.bath}${p.baths} Baths</span><span>${IC.car}${p.parking}</span></div>`}
+function card(p){
+  return `<a class="card reveal" href="#/p/${p.id}">
+    <div class="ph"><img src="${img(p.img[0],1)}" alt="${esc(p.title)} in ${p.area}" loading="lazy">
+      <span class="tag">${p.status}</span>${p.badge?`<span class="tag g">${p.badge}</span>`:''}
+      <button class="heart ${favs.includes(p.id)?'on':''}" data-fav="${p.id}" aria-label="Save">${IC.heart}</button></div>
+    <div class="body"><div class="loc">${IC.pin}${p.area}</div><h3>${esc(p.title)}</h3>
+      <div class="row"><div class="price"><small>${p.from?'Starting at':'Price'}</small>${money(p.price)}</div><span class="link-arrow">View ${IC.arrow}</span></div>
+      ${specs(p)}</div></a>`;
+}
+const AREAS=[...new Set(PROPS.map(p=>p.area))];
+const AREA_IMG={'Sahel Alma':'sa-2','Zouk Mikael':'zk-1','Zouk Mosbeh':'zm-2'};
+
+/* ---- pages ---- */
+function home(){
+  const minP=Math.min(...PROPS.map(p=>p.price));
+  const sa=byId('sahel-alma-sea-view');
+  return `
+  <section class="hero"><div class="bg"></div>
+    <div class="wrap">
+      <div class="eyebrow">Beirut Real Estate · Buy · Sell · Rent</div>
+      <h1 class="h-serif">Your key to <em>luxury living.</em></h1>
+      <p class="lead">Apartments in Beirut and all over Lebanon to buy, sell or rent, with new properties every week.</p>
+      <form class="search" id="search">
+        <label><span>Looking to</span><select name="deal"><option value="">Buy or rent</option><option value="sale">Buy</option><option value="rent">Rent</option></select></label>
+        <label><span>Location</span><select name="area"><option value="">All areas</option>${AREAS.map(a=>`<option>${a}</option>`).join('')}</select></label>
+        <label><span>Max budget</span><select name="max"><option value="">Any budget</option><option value="150000">Up to $150,000</option><option value="200000">Up to $200,000</option><option value="300000">Up to $300,000</option></select></label>
+        <button class="btn btn-gold" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <div class="strip"><div class="wrap">
+    <div><b>New every week</b><span>Fresh listings</span></div>
+    <div><b>Buy · Sell · Rent</b><span>One agency</span></div>
+    <div><b>Beirut &amp; Lebanon</b><span>Apartments</span></div>
+    <div><b>70 868 757</b><span>WhatsApp</span></div>
+  </div></div>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Featured listings</div><span class="rule"></span><h2 class="h-serif">Featured properties</h2></div>
+      <a class="link-arrow" href="#/properties">All properties ${IC.arrow}</a></div>
+    <div class="grid">${PROPS.map(card).join('')}</div>
+  </div></section>
+
+  <section class="sec spot"><div class="wrap">
+    <div class="collage reveal"><img src="${img('sa-3')}" alt="Living room with sea view, Sahel Alma" loading="lazy"><img src="${img('sa-1',1)}" alt="Reception, Sahel Alma" loading="lazy"><img src="${img('sa-2',1)}" alt="Living room, Sahel Alma" loading="lazy"></div>
+    <div class="reveal"><div class="eyebrow">In the spotlight · Sahel Alma</div><span class="rule"></span>
+      <h2 class="h2 h-serif">Wake up to the Mediterranean</h2>
+      <div class="spot facts"><div><b>${sa.size}</b><span>m²</span></div><div><b>${sa.beds}</b><span>Bedrooms</span></div><div><b>${sa.baths}</b><span>Bathrooms</span></div><div><b>${sa.parking}</b><span>Parking</span></div></div>
+      <p class="quote">Panoramic sea view, gypsum ceilings with warm hidden lighting and marble floors throughout.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:34px"><a class="btn btn-dark" href="#/p/${sa.id}">View property</a><button class="btn btn-line" data-ask="${sa.id}">Ask on WhatsApp</button></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Explore by area</div><span class="rule"></span><h2 class="h-serif">Where we sell</h2></div><p>Handpicked addresses across Lebanon, from the coast to the city.</p></div>
+    <div class="areas">${AREAS.map(a=>{const ps=PROPS.filter(p=>p.area===a);return `<a class="area reveal" href="#/properties?area=${encodeURIComponent(a)}"><img src="${img(AREA_IMG[a]||ps[0].img[0])}" alt="${a}" loading="lazy"><div><h3>${a}</h3><p>${ps.length} ${ps.length>1?'homes':'home'} · from ${money(Math.min(...ps.map(p=>p.price)))}</p></div></a>`}).join('')}</div>
+  </div></section>
+
+  <section class="sec" id="about" style="background:var(--paper)"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Why Merhi Homekey</div><span class="rule"></span><h2 class="h-serif">The key to your next home</h2></div><p>Merhi Homekey is a Beirut real estate agency for apartments in Beirut and across Lebanon. Whether you buy, sell or rent, we hand you the right key.</p></div>
+    <div class="svc">
+      <div class="reveal"><span class="n">01</span><h3>Buy with clarity</h3><p>Real photos, real prices and every key fact up front. Tell us what you need and we shortlist homes that fit your budget.</p></div>
+      <div class="reveal"><span class="n">02</span><h3>Sell with reach</h3><p>We photograph, present and promote your property to serious buyers on our website and Instagram.</p></div>
+      <div class="reveal"><span class="n">03</span><h3>Rent with ease</h3><p>Looking for a place to rent, or a tenant for yours? New rentals every week and visits arranged on your schedule.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec sell" id="sell"><div class="wrap">
+    <div class="reveal"><div class="eyebrow">For owners</div><span class="rule"></span><h2 class="h2 h-serif">Selling or renting out?</h2>
+      <p style="margin-top:18px">Send us the details in one minute. An agent will call you back to arrange a visit and a fair valuation.</p>
+      <ul><li>${IC.check}Professional listing on our website and social media</li><li>${IC.check}Serious, pre-qualified buyers</li><li>${IC.check}Support from the first visit to the final contract</li></ul></div>
+    <form class="form reveal" id="sellForm">
+      <label class="full"><span>I want to</span><select name="goal"><option>Sell</option><option>Rent out</option></select></label>
+      <label><span>Your name</span><input name="name" required autocomplete="name"></label>
+      <label><span>Phone</span><input name="phone" required type="tel" autocomplete="tel" inputmode="tel"></label>
+      <label><span>Property type</span><select name="type"><option>Apartment</option><option>Villa</option><option>Land</option><option>Shop / office</option><option>Building</option></select></label>
+      <label><span>Location</span><input name="loc" required placeholder="e.g. Achrafieh"></label>
+      <label><span>Size (m²)</span><input name="size" inputmode="numeric"></label>
+      <label><span>Expected price ($)</span><input name="price" inputmode="numeric"></label>
+      <label class="full"><span>Details</span><textarea name="notes" placeholder="Floor, bedrooms, view, parking..."></textarea></label>
+      <div class="full" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><button class="btn btn-gold" type="submit">${IC.wa} Send on WhatsApp</button><span class="note">Opens WhatsApp with your details written. Just press send.</span></div>
+    </form>
+  </div></section>
+
+  ${contactSec()}`;
+}
+function contactSec(){
+  return `<section class="sec contact" id="contact"><div class="wrap" style="display:block">
+    <div class="sec-head reveal center" style="display:block"><div class="eyebrow">Get in touch</div><span class="rule"></span><h2 class="h-serif">Let's find your key</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px">
+      <div class="cbox reveal"><div class="ic">${IC.phone}</div><h3>Call us</h3><p>Talk to an agent about any listing or a visit.</p><a class="l jsTel" data-n="70868757" href="#">+961 70 868 757</a></div>
+      <div class="cbox reveal"><div class="ic">${IC.wa}</div><h3>WhatsApp</h3><p>Send us what you're looking for and we'll reply with matching homes.</p><a class="l" href="#" data-wa="general">Chat on WhatsApp ${IC.arrow}</a></div>
+      <div class="cbox reveal"><div class="ic">${IC.grid}</div><h3>Follow us</h3><p>New properties every week, first on Instagram.</p><a class="l" href="${CONFIG.instagram}" target="_blank" rel="noopener">Instagram · @merhi.homekey</a></div>
+    </div></div></section>`;
+}
+function filterProps(q){
+  let r=PROPS.filter(p=>(!q.deal||p.deal===q.deal)&&(!q.area||p.area===q.area)&&(!q.beds||p.beds>=+q.beds)&&(!q.max||p.price<=+q.max));
+  if(q.sort==='low')r.sort((a,b)=>a.price-b.price);else if(q.sort==='high')r.sort((a,b)=>b.price-a.price);else if(q.sort==='size')r.sort((a,b)=>b.size-a.size);
+  return r;
+}
+function listPage(q,saved){
+  const list=saved?favs.map(byId):filterProps(q);
+  const sel=(n,opts)=>`<select name="${n}">${opts.map(([v,t])=>`<option value="${v}" ${String(q[n]||'')===v?'selected':''}>${t}</option>`).join('')}</select>`;
+  return `<section class="phead"><div class="wrap">
+    <div class="crumbs"><a href="#/">Home</a> / ${saved?'Saved':'Properties'}</div>
+    <h1 class="h-serif">${saved?'Saved properties':q.deal==='rent'?'Properties for rent':q.deal==='sale'?'Properties for sale':'All properties'}</h1>
+    ${saved?`<p style="color:var(--muted);margin-top:10px">Homes you saved on this device.</p>`:`<form class="filters" id="filters">
+      <label><span>Looking to</span>${sel('deal',[['','Buy or rent'],['sale','Buy'],['rent','Rent']])}</label>
+      <label><span>Location</span>${sel('area',[['','All areas'],...AREAS.map(a=>[a,a])])}</label>
+      <label><span>Bedrooms</span>${sel('beds',[['','Any'],['2','2+'],['3','3+']])}</label>
+      <label><span>Max budget</span>${sel('max',[['','Any budget'],['150000','Up to $150,000'],['200000','Up to $200,000'],['300000','Up to $300,000']])}</label>
+      <label><span>Sort by</span>${sel('sort',[['','Featured'],['low','Price: low to high'],['high','Price: high to low'],['size','Largest first']])}</label>
+    </form>`}
+  </div></section>
+  <section class="wrap"><div class="count">${list.length} ${list.length===1?'property':'properties'}</div>
+    ${list.length?`<div class="grid" style="margin-bottom:110px">${list.map(card).join('')}</div>`:
+    `<div class="empty"><h3>${saved?'Nothing saved yet':q.deal==='rent'?'Rentals on request':'No match for these filters'}</h3><p>${saved?'Tap the heart on any property to keep it here.':q.deal==='rent'?'New rentals arrive every week. Tell us the area and budget and we\'ll send you what\'s available.':'Tell us what you need and we\'ll look for you.'}</p><div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">${saved?'<a class="btn btn-dark" href="#/properties">Browse properties</a>':'<a class="btn btn-dark" href="#/properties">Clear filters</a><button class="btn btn-line" data-wa="general">Ask on WhatsApp</button>'}</div></div>`}
+  </section>`;
+}
+function propPage(p){
+  const n=p.img.length, sim=PROPS.filter(x=>x.id!==p.id);
+  const kf=[[IC.area,p.size+(p.terrace?' <small style="font-size:16px">+ '+p.terrace+'</small>':''),p.terrace?'m² + terrace':'m²'],[IC.bed,p.beds,'Bedrooms'],[IC.bath,p.baths,'Bathrooms'],[IC.car,p.parking,'Parking']];
+  const q=encodeURIComponent(p.area+', Lebanon');
+  return `<div class="pp"><div class="wrap">
+    <div class="crumbs"><a href="#/">Home</a> / <a href="#/properties">Properties</a> / ${p.area}</div>
+    <div class="gal">
+      ${p.img.slice(0,3).map((k,i)=>`<button data-lb="${i}" aria-label="Open photo ${i+1}"><img src="${img(k,i>0)}" alt="${esc(p.title)} photo ${i+1}">${i===0?`<span class="all">${IC.grid} ${n} photos</span>`:''}${i===2&&n>3?`<span class="more">+${n-3} photos</span>`:''}</button>`).join('')}
+    </div>
+    <div class="pp-grid">
+      <div>
+        <div class="loc">${IC.pin}${p.area}, ${p.region}</div>
+        <h1 class="h-serif">${esc(p.title)}</h1>
+        <p class="sub">${esc(p.intro)}</p>
+        <div class="mprice price"><small>${p.from?'Starting at':'Price'}</small>${money(p.price)}</div>
+        <div class="kf">${kf.map(([i,b,s])=>`<div>${i}<b>${b}</b><span>${s}</span></div>`).join('')}</div>
+        <h2>About this home</h2><div class="desc">${p.desc.map(t=>`<p>${esc(t)}</p>`).join('')}</div>
+        <h2>Highlights</h2><ul class="feat">${p.features.map(f=>`<li>${IC.check}${esc(f)}</li>`).join('')}</ul>
+        <h2>Location</h2>
+        <div class="mapbox"><div><div class="loc" style="margin-bottom:8px">${IC.map}${p.region}</div><b>${p.area}</b></div><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+      <aside class="side">
+        <div class="price"><small>${p.from?'Starting at':'Price'}</small>${money(p.price)}</div>
+        <p style="color:var(--muted);margin-top:10px">${p.type} · ${p.status} · ${p.size} m²</p>
+        <button class="btn btn-wa" data-ask="${p.id}" style="margin-top:24px">${IC.wa} I'm interested</button>
+        <a class="btn btn-line" href="tel:+${intl(p.phone)}">${IC.phone} Call ${fmtPhone(p.phone)}</a>
+        <div class="tools"><button data-fav="${p.id}" class="${favs.includes(p.id)?'on':''}">${IC.heart} Save</button><button data-share="${p.id}">${IC.share} Share</button></div>
+        <div class="agent"><svg class="mark" viewBox="0 0 64 70" aria-hidden="true"><defs><linearGradient id="mg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D68A"/><stop offset=".5" stop-color="#C9973F"/><stop offset="1" stop-color="#8E6522"/></linearGradient></defs><g fill="none" stroke="url(#mg3)" stroke-linecap="round" stroke-linejoin="round"><path d="M6 27L32 6l26 21" stroke-width="3.2"/><path d="M45 15V8h6v12" stroke-width="2.6"/><path d="M29 16h6v5h-6zM32 16v5M29 18.5h6" stroke-width="1.2"/></g><path d="M12 64v-3l3-1V36l-3-1v-3h11l9 21 9-21h11v3l-3 1v24l3 1v3H39v-3l3-1V43l-8.6 20h-2.8L22 43v17l3 1v3z" fill="url(#mg3)"/><g stroke="#0B0B0B" stroke-width="5" fill="none"><circle cx="32" cy="36" r="5"/><path d="M32 41v25"/></g><g stroke="url(#mg3)" fill="none" stroke-linecap="round"><circle cx="32" cy="36" r="4.4" stroke-width="2.2"/><circle cx="32" cy="36" r="1.2" stroke-width="1.4"/><path d="M32 40.5V67M32 60h4.5M32 64.5h3.5" stroke-width="2.4"/></g></svg><div><b>Merhi Homekey</b><span>Your agent · +961 ${fmtPhone(p.phone)}</span></div></div>
+      </aside>
+    </div>
+    <div class="mbar"><div class="price"><small>${p.from?'Starting at':'Price'}</small>${money(p.price)}</div><a class="btn btn-line" href="tel:+${intl(p.phone)}" aria-label="Call">${IC.phone}</a><button class="btn btn-wa" data-ask="${p.id}">${IC.wa} Interested</button></div>
+    ${sim.length?`<div class="sec-head" style="margin-bottom:30px"><div><div class="eyebrow">You may also like</div><span class="rule"></span><h2 class="h-serif" style="font-size:40px">Similar properties</h2></div></div><div class="grid" style="margin-bottom:110px">${sim.map(card).join('')}</div>`:''}
+  </div></div>`;
+}
+
+/* ---- router ---- */
+let cur=null;
+function parse(){
+  const h=location.hash.replace(/^#\/?/,''); const [path,qs]=h.split('?');
+  const q=Object.fromEntries(new URLSearchParams(qs||'')); return {parts:path.split('/').filter(Boolean),q};
+}
+function render(){
+  const {parts,q}=parse(); const r=parts[0]||'home';
+  let html,title='Merhi Homekey', over=false, navOn=r;
+  if(r==='properties'){html=listPage(q);title='Properties for sale · Merhi Homekey'}
+  else if(r==='saved'){html=listPage({},true);title='Saved · Merhi Homekey';navOn=''}
+  else if(r==='p'&&byId(parts[1])){cur=byId(parts[1]);html=propPage(cur);title=cur.title+' · '+cur.area+' · Merhi Homekey';navOn='properties'}
+  else {html=home();over=true}
+  app.innerHTML=html; document.title=title;
+  document.body.classList.toggle('over',over);
+  document.body.classList.toggle('pp-on',r==='p'&&!!cur&&parts[1]===cur.id);
+  $$('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===navOn));
+  const sec=['sell','about','contact'].includes(r)?$('#'+r):null;
+  if(sec)requestAnimationFrame(()=>window.scrollTo(0,sec.getBoundingClientRect().top+scrollY-70));
+  else window.scrollTo(0,0);
+  onScroll(); observe(); wire();
+}
+function wire(){
+  const s=$('#search'); if(s)s.onsubmit=e=>{e.preventDefault();const p=new URLSearchParams([...new FormData(s)].filter(([,v])=>v));location.hash='#/properties'+(p+''?'?'+p:'')};
+  const f=$('#filters'); if(f)f.onchange=()=>{const p=new URLSearchParams([...new FormData(f)].filter(([,v])=>v));history.replaceState(null,'','#/properties'+(p+''?'?'+p:''));const y=scrollY;render();scrollTo(0,y)};
+  const sf=$('#sellForm'); if(sf)sf.onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(sf));
+    const L=['Hello Merhi Homekey, I want to '+(d.goal==='Rent out'?'rent out':'sell')+' my property.','','Name: '+d.name,'Phone: '+d.phone,'Type: '+d.type,'Location: '+d.loc];
+    if(d.size)L.push('Size: '+d.size+' m²'); if(d.price)L.push('Expected price: $'+d.price); if(d.notes)L.push('Details: '+d.notes);
+    openWa(CONFIG.mainPhone,L.join('\n'))};
+}
+document.addEventListener('click',e=>{
+  const fav=e.target.closest('[data-fav]'); if(fav){e.preventDefault();e.stopPropagation();toggleFav(fav.dataset.fav);return}
+  const ask=e.target.closest('[data-ask]'); if(ask){e.preventDefault();const p=byId(ask.dataset.ask);
+    openWa(p.phone,`Hello Merhi Homekey, I'm interested in this property:\n${p.title} – ${p.area}\n${p.from?'Starting at ':''}${money(p.price)} · ${p.size} m² · ${p.beds} bed\n${link(p)}\n\nCan I know more and book a visit?`);return}
+  const wa=e.target.closest('[data-wa]'); if(wa){e.preventDefault();openWa(CONFIG.mainPhone,"Hello Merhi Homekey, I'm looking for a property. Can you help me?");return}
+  const tel=e.target.closest('.jsTel'); if(tel){e.preventDefault();location.href='tel:+'+intl(tel.dataset.n);return}
+  const sh=e.target.closest('[data-share]'); if(sh){const p=byId(sh.dataset.share),u=link(p);
+    if(navigator.share)navigator.share({title:p.title,text:p.title+' – '+p.area,url:u}).catch(()=>{});
+    else{(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>toast('Link copied'),()=>prompt('Copy this link',u))}return}
+  const lb=e.target.closest('[data-lb]'); if(lb){openLb(+lb.dataset.lb);return}
+});
+$('#hdrCall').onclick=e=>{e.preventDefault();location.href='tel:+'+intl(CONFIG.mainPhone)};
+$('#waFloat').onclick=e=>{e.preventDefault();if(cur&&parse().parts[0]==='p')$('[data-ask]')?.click();else openWa(CONFIG.mainPhone,"Hello Merhi Homekey, I'm looking for a property. Can you help me?")};
+
+/* lightbox */
+let li=0;
+function openLb(i){li=i;$('#lbT').innerHTML=cur.img.map((k,j)=>`<img src="${img(k,1)}" data-j="${j}" alt="">`).join('');showLb();$('#lb').classList.add('open');document.body.style.overflow='hidden'}
+function showLb(){const n=cur.img.length;li=(li+n)%n;$('#lbI').src=img(cur.img[li]);$('#lbI').alt=cur.title+' photo '+(li+1);$('#lbN').textContent=(li+1)+' / '+n;$$('#lbT img').forEach((t,j)=>t.classList.toggle('on',j===li));$('#lbT img.on')?.scrollIntoView({inline:'center',block:'nearest'})}
+function closeLb(){$('#lb').classList.remove('open');document.body.style.overflow=''}
+$('#lbX').onclick=closeLb;$('#lbP').onclick=()=>{li--;showLb()};$('#lbNx').onclick=()=>{li++;showLb()};
+$('#lbT').onclick=e=>{const t=e.target.closest('[data-j]');if(t){li=+t.dataset.j;showLb()}};
+$('#lb').addEventListener('click',e=>{if(e.target.classList.contains('stage'))closeLb()});
+document.addEventListener('keydown',e=>{if(!$('#lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft'){li--;showLb()}if(e.key==='ArrowRight'){li++;showLb()}});
+let tx=null;$('#lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('#lb').addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>45){li+=d<0?1:-1;showLb()}tx=null});
+
+/* header + reveal */
+function onScroll(){$('#hdr').classList.toggle('solid',scrollY>60)}
+addEventListener('scroll',onScroll,{passive:true});
+let io;function observe(){if(!('IntersectionObserver'in window)){$$('.reveal').forEach(e=>e.classList.add('in'));return}
+  io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{rootMargin:'0px 0px -8% 0px'});$$('.reveal').forEach(e=>io.observe(e))}
+
+$('#yr').textContent=new Date().getFullYear();
+saveFavs();
+addEventListener('hashchange',render);
+render();
+</script>
+</body>
+</html>
